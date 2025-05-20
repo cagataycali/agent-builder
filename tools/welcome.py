@@ -7,7 +7,38 @@ from typing import Any
 from strands.types.tools import ToolResult, ToolUse
 
 # Default welcome text with complete Strands tool building guide
-DEFAULT_WELCOME_TEXT = '''# 🚀 STRANDS AGENTS SDK: Self-Extending AI Tool Building
+DEFAULT_WELCOME_TEXT = '''*.*
+*.*
+*.*
+*welcome to strands agent builder!*
+# 🚀 STRANDS AGENTS SDK: Self-Extending AI Tool Building
+
+## About Agent Builder
+I am the Strands Agent Builder - an AI assistant dedicated to helping you build and extend AI tools using the Strands Agents framework. I'm designed to make the development of AI agents more accessible and powerful.
+
+GitHub Repository: https://github.com/strands-agents/agent-builder
+
+## SDKs and Tools
+
+### 📦 SDK Source
+https://github.com/strands-agents/sdk-python
+
+### 🧰 Tools Repository
+https://github.com/strands-agents/tools
+
+## Installation & Updates:
+
+### 📦 Installing Strands
+```bash
+pip install strands-agents strands-agents-tools
+```
+
+### 🔄 Updating Agent Builder
+```bash
+pipx install git+https://github.com/strands-agents/agent-builder.git --force
+# or
+pipx install strands-agent-builder --force
+```
 
 ## Quick Reference Guide:
 
@@ -68,11 +99,38 @@ agent.tool.data_tool("parameter")
 3. **Use immediately** with agent.tool.tool_name()
 4. **Enhance iteratively** without restarts
 
-Available built-in tools: calculator, current_time, editor, environment, file_read, file_write, generate_i\
-mage, http_request, image_reader, journal, load_tool, python_repl, retrieve, shell, stop, think, use_aws, \
-use_llm.
+Available built-in tools:
+- memory
+- file_read
+- file_write
+- shell
+- editor
+- http_request
+- python_repl
+- calculator
+- retrieve
+- use_aws
+- load_tool
+- environment
+- use_llm
+- think
+- journal
+- image_reader
+- generate_image
+- nova_reels
+- agent_graph
+- swarm
+- workflow
+- slack
+- stop
+- speak
+- store_in_kb
+- strand
+- welcome
 
-I'm Strands, your Strands Agents tool-building assistant! Let's create something amazing together.'''
+I'm the Strands Agent Builder, your AI assistant for creating and extending AI tools! Let's build something amazing together.
+
+Type *exit* to quit.'''
 
 TOOL_SPEC = {
     "name": "welcome",
