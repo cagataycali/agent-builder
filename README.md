@@ -1,4 +1,36 @@
-# Strands Agent Builder
+<div align="center">
+  <div>
+    <a href="https://strandsagents.com">
+      <img src="https://strandsagents.com/latest/assets/logo-auto.svg" alt="Strands Agents" width="55px" height="105px">
+    </a>
+  </div>
+
+  <h1>
+    Strands Agent Builder
+  </h1>
+
+  <h2>
+    A model-driven approach to building AI agents in just a few lines of code.
+  </h2>
+
+  <div align="center">
+    <a href="https://github.com/strands-agents/agent-builder/graphs/commit-activity"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/strands-agents/agent-builder"/></a>
+    <a href="https://github.com/strands-agents/agent-builder/issues"><img alt="GitHub open issues" src="https://img.shields.io/github/issues/strands-agents/agent-builder"/></a>
+    <a href="https://github.com/strands-agents/agent-builder/pulls"><img alt="GitHub open pull requests" src="https://img.shields.io/github/issues-pr/strands-agents/agent-builder"/></a>
+    <a href="https://github.com/strands-agents/agent-builder/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/strands-agents/agent-builder"/></a>
+    <a href="https://pypi.org/project/strands-agents-builder/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/strands-agents-builder"/></a>
+    <a href="https://python.org"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/strands-agents-builder"/></a>
+  </div>
+  
+  <p>
+    <a href="https://strandsagents.com/">Documentation</a>
+    ◆ <a href="https://github.com/strands-agents/samples">Samples</a>
+    ◆ <a href="https://github.com/strands-agents/sdk-python">Python SDK</a>
+    ◆ <a href="https://github.com/strands-agents/tools">Tools</a>
+    ◆ <a href="https://github.com/strands-agents/agent-builder">Agent Builder</a>
+    ◆ <a href="https://github.com/strands-agents/mcp-server">MCP Server</a>
+  </p>
+</div>
 
 An interactive Strands agent toolkit designed to help you build, test, and extend your own custom AI agents and tools. With the Strands Agent Builder, you can create specialized agents, develop custom tools, and compose complex AI workflows—all from your terminal.
 
@@ -98,8 +130,8 @@ Strands comes with optimized, maxed-out configuration settings for the Bedrock m
 
 ```json
 {
-    "model_id": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
-    "max_tokens": 64000,
+    "model_id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+    "max_tokens": 32767,
     "boto_client_config": {
         "read_timeout": 900,
         "connect_timeout": 900,
@@ -118,8 +150,8 @@ Strands comes with optimized, maxed-out configuration settings for the Bedrock m
 ```
 
 These settings provide:
-- Claude 3.7 Sonnet (latest high-performance model)
-- Maximum token output (64,000 tokens)
+- Claude Sonnet 4 (latest high-performance model)
+- Maximum token output (32,768 tokens)
 - Extended timeouts (15 minutes) for complex operations
 - Automatic retries with adaptive backoff
 - Enabled thinking capability with 2,048 token budget for recursive reasoning
@@ -176,22 +208,29 @@ export STRANDS_SYSTEM_PROMPT="You are a Python expert."
 echo "You are a security expert." > .prompt
 ```
 
-## Contributing
-
-```bash
-git clone https://github.com/strands-agents/agent-builder.git ~/.agent-builder
-cd ~/.agent-builder
-python3 -m venv venv && source venv/bin/activate
-pip3 install -e .
-pip3 install -e ".[test]"
-
-# Run tests
-hatch run test         # Run all tests with verbose coverage output
-hatch run test -k test_pattern  # Run specific tests matching a pattern
-```
-
-Testing is managed through hatch scripting in pyproject.toml.
-
 ## Exit
 
 Type `exit`, `quit`, or press `Ctrl+C`/`Ctrl+D`
+
+## Contributing ❤️
+
+We welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) for details on:
+- Reporting bugs & features
+- Development setup
+- Contributing via Pull Requests
+- Code of Conduct
+- Reporting of security issues
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
+## ⚠️ Preview Status
+
+Strands Agents is currently in public preview. During this period:
+- APIs may change as we refine the SDK
+- We welcome feedback and contributions
