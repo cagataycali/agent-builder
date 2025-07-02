@@ -72,7 +72,7 @@ Strands comes with a comprehensive set of built-in tools:
 
 - **agent_graph**: Create and manage graphs of agents
 - **calculator**: Perform mathematical operations
-- **cron**: Task scheduling with cron jobs
+- **cron**: Task scheduling with cron jobs *(not available on Windows)*
 - **current_time**: Get the current date and time
 - **editor**: File editing operations like line edits, search, and undo
 - **environment**: Manage environment variables
@@ -83,9 +83,9 @@ Strands comes with a comprehensive set of built-in tools:
 - **load_tool**: Dynamically load more tools at runtime
 - **memory**: Agent memory persistence in Amazon Bedrock Knowledge Bases
 - **nova_reels**: Create AI generated videos with Nova Reels on Amazon Bedrock
-- **python_repl**: Run Python code
+- **python_repl**: Run Python code *(not available on Windows)*
 - **retrieve**: Semantically retrieve data from Amazon Bedrock Knowledge Bases for RAG, memory, and other purposes
-- **shell**: Execute shell commands
+- **shell**: Execute shell commands *(not available on Windows)*
 - **slack**: Slack integration with real-time events, API access, and message sending
 - **speak**: Generate speech from text using macOS say command or Amazon Polly
 - **stop**: Force stop the agent event loop
@@ -204,6 +204,24 @@ export STRANDS_SYSTEM_PROMPT="You are a Python expert."
 # Or local file
 echo "You are a security expert." > .prompt
 ```
+
+## 🌍 Environment Variables Configuration
+
+Strands Agent Builder also provides customization through environment variables:
+
+| Environment Variable | Description | Default | 
+|----------------------|-------------|---------|
+| STRANDS_MODEL_ID | Claude model ID to use for inference | us.anthropic.claude-sonnet-4-20250514-v1:0 |
+| STRANDS_MAX_TOKENS | Maximum tokens for agent responses | 32768 |
+| STRANDS_BUDGET_TOKENS | Token budget for agent thinking/reasoning | 2048 |
+| STRANDS_THINKING_TYPE | Type of thinking capability | enabled |
+| STRANDS_ANTHROPIC_BETA | Anthropic beta features (comma-separated) | interleaved-thinking-2025-05-14 |
+| STRANDS_CACHE_TOOLS | Tool caching strategy | default |
+| STRANDS_CACHE_PROMPT | Prompt caching strategy | default |
+| STRANDS_SYSTEM_PROMPT | Custom system prompt (overrides .prompt file) | None |
+| STRANDS_KNOWLEDGE_BASE_ID | Default Knowledge Base ID | None |
+| STRANDS_TOOL_CONSOLE_MODE | Enable rich console UI | enabled |
+| BYPASS_TOOL_CONSENT | Skip tool confirmation prompts | false |
 
 ## Exit
 
